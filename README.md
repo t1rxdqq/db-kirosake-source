@@ -5,15 +5,13 @@ Using an example, I will show you how to create a database for a Discord server 
 ```py
 import discord
 from discord.ext import commands,tasks
-import os, sys, json
-from github import Github
-import asyncio
-from settings.dbkirosake import DBKirosake
+import json
+from dbkirosake import DBKirosake
 from settings.config import *
 
 DB=DBKirosake(
-    actoken,
-    repos
+    actoken, # access token your GitHub account
+    repos # your private/public repository
 )
 
 intents = discord.Intents.all()
@@ -41,4 +39,16 @@ async def on_ready():
             )
     
 client.run(token)
+```
+A database is created with the name `nameDB` which contains a folder called `guild.id` and file `users.json`
+
+Structure `../test/000001/users.json`
+The users.json file contains the list:
+```json
+{
+    "here ids": {
+        "lvl": 1,
+        "cash": 10
+    }
+}
 ```
