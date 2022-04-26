@@ -42,7 +42,7 @@ client.run(token)
 ```
 A database is created with the name `nameDB` which contains a folder called `guild.id` and file `users.json`
 
-Structure `../test/000001/users.json`
+Structure `../test/1234567890/users.json`
 The users.json file contains the list:
 ```json
 {
