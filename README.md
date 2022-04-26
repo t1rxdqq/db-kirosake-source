@@ -52,3 +52,24 @@ The users.json file contains the list:
     }
 }
 ```
+# Data update
+```py
+DB=DBKirosake(
+    actoken,
+    repos
+)
+file=f"{ctx.guild.id}/users.json" # repo/1234567890/users.json
+await DB.update_more(
+    file, # connect file
+    str(member.id), # get user in users.jsom
+    'cash', # what are we changing 
+    100, # how much do we change 
+    'int', # data type int/float/str
+    'add' # change type add/replace
+)
+```
+# Get dictionary
+```py
+file=f"{member.guild.id}/users.json"
+db=await DB.get(file)
+```
