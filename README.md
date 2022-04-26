@@ -58,7 +58,7 @@ DB=DBKirosake(
     actoken,
     repos
 )
-file=f"{ctx.guild.id}/users.json" # repo/1234567890/users.json
+file=f"test/{ctx.guild.id}/users.json" # /repo/test/1234567890/users.json
 await DB.update_more(
     file, # connect file
     str(member.id), # get user in users.jsom
@@ -70,6 +70,6 @@ await DB.update_more(
 ```
 # Get dictionary
 ```py
-file=f"{member.guild.id}/users.json"
+file=f"test/{member.guild.id}/users.json"
 db=await DB.get(file)
 ```
