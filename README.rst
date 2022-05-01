@@ -2,7 +2,12 @@ Description
 ===========
 
 An easy-to-use cloud database that uses a GitHub repository to store
-data. # Example Using an example, I will show you how to create a
+data.
+
+Example 
+=======
+
+Using an example, I will show you how to create a
 database for a Discord server using pycord
 
 .. code:: py
